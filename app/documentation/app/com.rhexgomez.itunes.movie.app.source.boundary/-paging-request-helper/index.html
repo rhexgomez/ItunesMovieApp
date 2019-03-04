@@ -1,0 +1,185 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>PagingRequestHelper - app</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">app</a>&nbsp;/&nbsp;<a href="../index.html">com.rhexgomez.itunes.movie.app.source.boundary</a>&nbsp;/&nbsp;<a href="./index.html">PagingRequestHelper</a><br/>
+<br/>
+<h1>PagingRequestHelper</h1>
+<code><span class="keyword">class </span><span class="identifier">PagingRequestHelper</span></code>
+<p>A helper class for <a href="#">BoundaryCallback</a>s and
+<a href="#">DataSource</a>s to help with tracking network requests.</p>
+<p>It is designed to support 3 types of requests, <a href="-request-type/-i-n-i-t-i-a-l.html">INITIAL</a>,
+<a href="-request-type/-b-e-f-o-r-e.html">BEFORE</a> and <a href="-request-type/-a-f-t-e-r.html">AFTER</a> and runs only 1 request
+for each of them via <a href="#">.runIfNotRunning</a>.</p>
+<p>It tracks a <a href="-status/index.html">Status</a> and an <code>error</code> for each <a href="-request-type/index.html">RequestType</a>.</p>
+<p>A sample usage of this class to limit requests looks like this:</p>
+<p><strong>Override</strong><br/>
+public void onItemAtFrontLoaded(@NonNull MyItem itemAtFront) {
+helper.runIfNotRunning(PagingRequestHelper.RequestType.BEFORE,
+helperCallback -&gt; api.getTopBefore(itemAtFront.getName(), 10).enqueue(
+new Callback&amp;lt;ApiResponse&gt;() {</p>
+<p><strong>Override</strong><br/>
+public void onResponse(Call&amp;lt;ApiResponse&gt; call,
+Response&amp;lt;ApiResponse&gt; response) {
+// TODO insert new records into database
+helperCallback.recordSuccess();
+}</p>
+<p><strong>Override</strong><br/>
+public void onFailure(Call&amp;lt;ApiResponse&gt; call, Throwable t) {
+helperCallback.recordFailure(t);
+}
+}));
+}</p>
+<p><strong>Override</strong><br/>
+public void onItemAtEndLoaded(@NonNull MyItem itemAtEnd) {
+helper.runIfNotRunning(PagingRequestHelper.RequestType.AFTER,
+helperCallback -&gt; api.getTopBefore(itemAtEnd.getName(), 10).enqueue(
+new Callback&amp;lt;ApiResponse&gt;() {</p>
+<p><strong>Override</strong><br/>
+public void onResponse(Call&amp;lt;ApiResponse&gt; call,
+Response&amp;lt;ApiResponse&gt; response) {
+// TODO insert new records into database
+helperCallback.recordSuccess();
+}</p>
+<p><strong>Override</strong><br/>
+<p>public void onFailure(Call&amp;lt;ApiResponse&gt; call, Throwable t) {
+helperCallback.recordFailure(t);
+}
+}));
+}
+}</p>
+
+
+
+
+<p>The helper provides an API to observe combined request status, which can be reported back to the
+application based on your business rules.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-callback/index.html">Callback</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Callback</span></code>
+<p>Callback class provided to the <a href="#">.run</a> method to report the result.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-listener/index.html">Listener</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">Listener</span></code>
+<p>Listener interface to get notified by request status changes.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-request-type/index.html">RequestType</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">RequestType</span></code>
+<p>Available request types.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-status/index.html">Status</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">Status</span></code>
+<p>Represents the status of a Request for each <a href="-request-type/index.html">RequestType</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-status-report/index.html">StatusReport</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">StatusReport</span></code>
+<p>Data class that holds the information about the current status of the ongoing requests
+using this helper.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">PagingRequestHelper</span><span class="symbol">(</span><span class="identifier" id="com.rhexgomez.itunes.movie.app.source.boundary.PagingRequestHelper$<init>(java.util.concurrent.Executor)/mRetryService">mRetryService</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/util/concurrent/Executor.html"><span class="identifier">Executor</span></a><span class="symbol">)</span></code>
+<p>A helper class for <a href="#">BoundaryCallback</a>s and
+<a href="#">DataSource</a>s to help with tracking network requests.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="add-listener.html">addListener</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">addListener</span><span class="symbol">(</span><span class="identifier" id="com.rhexgomez.itunes.movie.app.source.boundary.PagingRequestHelper$addListener(com.rhexgomez.itunes.movie.app.source.boundary.PagingRequestHelper.Listener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="-listener/index.html"><span class="identifier">Listener</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Adds a new listener that will be notified when any request changes <a href="-status/index.html">state</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="remove-listener.html">removeListener</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">removeListener</span><span class="symbol">(</span><span class="identifier" id="com.rhexgomez.itunes.movie.app.source.boundary.PagingRequestHelper$removeListener(com.rhexgomez.itunes.movie.app.source.boundary.PagingRequestHelper.Listener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="-listener/index.html"><span class="identifier">Listener</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Removes the given listener from the listeners list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="retry-all-failed.html">retryAllFailed</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">retryAllFailed</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Retries all failed requests.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="run-if-not-running.html">runIfNotRunning</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">runIfNotRunning</span><span class="symbol">(</span><span class="identifier" id="com.rhexgomez.itunes.movie.app.source.boundary.PagingRequestHelper$runIfNotRunning(com.rhexgomez.itunes.movie.app.source.boundary.PagingRequestHelper.RequestType, kotlin.Function1((com.rhexgomez.itunes.movie.app.source.boundary.PagingRequestHelper.Callback, kotlin.Unit)))/type">type</span><span class="symbol">:</span>&nbsp;<a href="-request-type/index.html"><span class="identifier">RequestType</span></a><span class="symbol">, </span><span class="identifier" id="com.rhexgomez.itunes.movie.app.source.boundary.PagingRequestHelper$runIfNotRunning(com.rhexgomez.itunes.movie.app.source.boundary.PagingRequestHelper.RequestType, kotlin.Function1((com.rhexgomez.itunes.movie.app.source.boundary.PagingRequestHelper.Callback, kotlin.Unit)))/request">request</span><span class="symbol">:</span>&nbsp;<a href="../-request.html"><span class="identifier">Request</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Runs the given <a href="../-request.html">Request</a> if no other requests in the given request type is already
+running.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

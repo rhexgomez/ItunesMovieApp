@@ -1,0 +1,222 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>alltypes - app</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<h3>All Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="../com.rhexgomez.itunes.movie.app/-app-application/index.html">com.rhexgomez.itunes.movie.app.AppApplication</a></td>
+<td>
+<p>This <a href="https://developer.android.com/reference/android/app/Application.html">Application</a> sublcass will initialize our app context.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.rhexgomez.itunes.movie.app.source.boundary/-boundary-bundle/index.html">com.rhexgomez.itunes.movie.app.source.boundary.BoundaryBundle</a></td>
+<td>
+<p>This packages the Boundary and the trigger for count.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.rhexgomez.itunes.movie.app.util/java.util.-date/index.html">java.util.Date</a> (extensions in package com.rhexgomez.itunes.movie.app.util)</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.rhexgomez.itunes.movie.app.source.cache/-date-converter/index.html">com.rhexgomez.itunes.movie.app.source.cache.DateConverter</a></td>
+<td>
+<p>Used by the room database internally for converting <a href="https://developer.android.com/reference/java/util/Date.html">Date</a> to <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a> (or vice versa)!</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.rhexgomez.itunes.movie.app.util/kotlin.-double/index.html">kotlin.Double</a> (extensions in package com.rhexgomez.itunes.movie.app.util)</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.rhexgomez.itunes.movie.app.ui.home/-home-fragment/index.html">com.rhexgomez.itunes.movie.app.ui.home.HomeFragment</a></td>
+<td>
+<p>A Fragment that shows recently viewed movies and searched movies.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.rhexgomez.itunes.movie.app.ui.home/-home-view-model/index.html">com.rhexgomez.itunes.movie.app.ui.home.HomeViewModel</a></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.rhexgomez.itunes.movie.app.source.api/-itune-response/index.html">com.rhexgomez.itunes.movie.app.source.api.ItuneResponse</a></td>
+<td>
+<p>The API response from the <a href="../com.rhexgomez.itunes.movie.app.source.api/-itunes-api-service/index.html">ItunesApiService</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.rhexgomez.itunes.movie.app.source.api/-itunes-api/index.html">com.rhexgomez.itunes.movie.app.source.api.ItunesApi</a></td>
+<td>
+<p>A singleton implementation of the API.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.rhexgomez.itunes.movie.app.source.api/-itunes-api-service/index.html">com.rhexgomez.itunes.movie.app.source.api.ItunesApiService</a></td>
+<td>
+<p>A set of API for iTune.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.rhexgomez.itunes.movie.app.source.cache/-itunes-movie-cache/index.html">com.rhexgomez.itunes.movie.app.source.cache.ItunesMovieCache</a></td>
+<td>
+<p>This database is for caching Movie information. This will server
+as the single source truth.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.rhexgomez.itunes.movie.app.ui/-main-activity/index.html">com.rhexgomez.itunes.movie.app.ui.MainActivity</a></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.rhexgomez.itunes.movie.app.source.api/-movie/index.html">com.rhexgomez.itunes.movie.app.source.api.Movie</a></td>
+<td>
+<p>Information about the Movie.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.rhexgomez.itunes.movie.app.source.boundary/-movie-boundary/index.html">com.rhexgomez.itunes.movie.app.source.boundary.MovieBoundary</a></td>
+<td>
+<p>Notifies if we reached the last Movie in our List or no item is present in our database.
+This is a good place to trigger a network operation and cache the results.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.rhexgomez.itunes.movie.app.source.cache.dao/-movie-dao/index.html">com.rhexgomez.itunes.movie.app.source.cache.dao.MovieDao</a></td>
+<td>
+<p>Manage the Read and Write query for our Movies.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.rhexgomez.itunes.movie.app.ui.detail/-movie-details-fragment/index.html">com.rhexgomez.itunes.movie.app.ui.detail.MovieDetailsFragment</a></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.rhexgomez.itunes.movie.app.source.cache/-movie-entity/index.html">com.rhexgomez.itunes.movie.app.source.cache.MovieEntity</a></td>
+<td>
+<p>The SQLite table that stores the movie information.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.rhexgomez.itunes.movie.app.source.repository/-movie-repository/index.html">com.rhexgomez.itunes.movie.app.source.repository.MovieRepository</a></td>
+<td>
+<p>Encapsulates the Movie source's implementation (e.g. Network and Cache).
+Note : It safe to build a singleton instance of this class.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.rhexgomez.itunes.movie.app.source.boundary/-paging-request-helper/index.html">com.rhexgomez.itunes.movie.app.source.boundary.PagingRequestHelper</a></td>
+<td>
+<p>A helper class for <a href="#">BoundaryCallback</a>s and
+<a href="#">DataSource</a>s to help with tracking network requests.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.rhexgomez.itunes.movie.app.source.boundary/-request.html">com.rhexgomez.itunes.movie.app.source.boundary.Request</a></td>
+<td>
+<p>Runner class that runs a request tracked by the <a href="../com.rhexgomez.itunes.movie.app.source.boundary/-paging-request-helper/index.html">PagingRequestHelper</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.rhexgomez.itunes.movie.app.ui.home/-search-result-view-holder/index.html">com.rhexgomez.itunes.movie.app.ui.home.SearchResultViewHolder</a></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.rhexgomez.itunes.movie.app.source.cache/-search-results-entity/index.html">com.rhexgomez.itunes.movie.app.source.cache.SearchResultsEntity</a></td>
+<td>
+<p>The SQLite table that stores the search results which is mapped
+to a certain keyword.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.rhexgomez.itunes.movie.app.ui.home/-searched-movies-adapter/index.html">com.rhexgomez.itunes.movie.app.ui.home.SearchedMoviesAdapter</a></td>
+<td>
+<p>The <a href="#">androidx.recyclerview.widget.RecyclerView.Adapter</a> for Movies.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.rhexgomez.itunes.movie.app.util/-single-live-event/index.html">com.rhexgomez.itunes.movie.app.util.SingleLiveEvent</a></td>
+<td>
+<p>A lifecycle-aware observable that sends only new updates after subscription, used for events like
+navigation and Snackbar messages.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.rhexgomez.itunes.movie.app.util/kotlin.-string/index.html">kotlin.String</a> (extensions in package com.rhexgomez.itunes.movie.app.util)</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.rhexgomez.itunes.movie.app.source.cache/-uri-converter/index.html">com.rhexgomez.itunes.movie.app.source.cache.UriConverter</a></td>
+<td>
+<p>Used by the room database internally for converting <a href="https://developer.android.com/reference/android/net/Uri.html">Uri</a> to <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a> (or vice versa)!</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.rhexgomez.itunes.movie.app.source.cache.dao/-watch-history-dao/index.html">com.rhexgomez.itunes.movie.app.source.cache.dao.WatchHistoryDao</a></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.rhexgomez.itunes.movie.app.source.cache/-watch-history-entity/index.html">com.rhexgomez.itunes.movie.app.source.cache.WatchHistoryEntity</a></td>
+<td>
+<p>The SQLite table that stores the user's movie browsing history.
+It is primarily about storing date viewed of the movie!</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.rhexgomez.itunes.movie.app.ui.home/-watch-result-view-holder/index.html">com.rhexgomez.itunes.movie.app.ui.home.WatchResultViewHolder</a></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.rhexgomez.itunes.movie.app.ui.home/-watched-movie-adapter/index.html">com.rhexgomez.itunes.movie.app.ui.home.WatchedMovieAdapter</a></td>
+<td>
+<p>The <a href="#">androidx.recyclerview.widget.RecyclerView.Adapter</a> for Movies.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

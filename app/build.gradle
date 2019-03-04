@@ -69,7 +69,7 @@ dependencies {
 
 dokka {
     outputFormat = 'html'
-    outputDirectory = "$buildDir/javadoc"
+    outputDirectory = "${rootDir}/documentation"
 }
 
 if (project.hasProperty("kotlin")) { //Kotlin libraries

@@ -1,0 +1,76 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>MovieDao - app</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">app</a>&nbsp;/&nbsp;<a href="../index.html">com.rhexgomez.itunes.movie.app.source.cache.dao</a>&nbsp;/&nbsp;<a href="./index.html">MovieDao</a><br/>
+<br/>
+<h1>MovieDao</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">MovieDao</span></code>
+<p>Manage the Read and Write query for our Movies.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">MovieDao</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Manage the Read and Write query for our Movies.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="get-movie.html">getMovie</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">getMovie</span><span class="symbol">(</span><span class="identifier" id="com.rhexgomez.itunes.movie.app.source.cache.dao.MovieDao$getMovie(kotlin.String)/movieId">movieId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="../../com.rhexgomez.itunes.movie.app.source.cache/-movie-entity/index.html"><span class="identifier">MovieEntity</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="get-movies-by-keyword.html">getMoviesByKeyword</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">getMoviesByKeyword</span><span class="symbol">(</span><span class="identifier" id="com.rhexgomez.itunes.movie.app.source.cache.dao.MovieDao$getMoviesByKeyword(kotlin.String)/keyword">keyword</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Factory</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">,</span>&nbsp;<a href="../../com.rhexgomez.itunes.movie.app.source.cache/-movie-entity/index.html"><span class="identifier">MovieEntity</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="insert-movie.html">insertMovie</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">insertMovie</span><span class="symbol">(</span><span class="identifier" id="com.rhexgomez.itunes.movie.app.source.cache.dao.MovieDao$insertMovie(com.rhexgomez.itunes.movie.app.source.cache.MovieEntity)/movie">movie</span><span class="symbol">:</span>&nbsp;<a href="../../com.rhexgomez.itunes.movie.app.source.cache/-movie-entity/index.html"><span class="identifier">MovieEntity</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Insert movie in the database if not exist.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="insert-movies.html">insertMovies</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">insertMovies</span><span class="symbol">(</span><span class="identifier" id="com.rhexgomez.itunes.movie.app.source.cache.dao.MovieDao$insertMovies(kotlin.collections.List((com.rhexgomez.itunes.movie.app.source.cache.MovieEntity)))/movies">movies</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../../com.rhexgomez.itunes.movie.app.source.cache/-movie-entity/index.html"><span class="identifier">MovieEntity</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Insert each movie not unless it does exist already.
+This INSERT runs inside a db Transaction!</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="insert-searches.html">insertSearches</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">insertSearches</span><span class="symbol">(</span><span class="identifier" id="com.rhexgomez.itunes.movie.app.source.cache.dao.MovieDao$insertSearches(kotlin.collections.List((com.rhexgomez.itunes.movie.app.source.cache.SearchResultsEntity)))/genres">genres</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../../com.rhexgomez.itunes.movie.app.source.cache/-search-results-entity/index.html"><span class="identifier">SearchResultsEntity</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Map the movie searches to a search keyword.
+This INSERT runs inside a db Transaction!</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

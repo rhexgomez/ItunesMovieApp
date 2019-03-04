@@ -1,0 +1,56 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>MovieRepository - app</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">app</a>&nbsp;/&nbsp;<a href="../index.html">com.rhexgomez.itunes.movie.app.source.repository</a>&nbsp;/&nbsp;<a href="./index.html">MovieRepository</a><br/>
+<br/>
+<h1>MovieRepository</h1>
+<code><span class="keyword">class </span><span class="identifier">MovieRepository</span></code>
+<p>Encapsulates the Movie source's implementation (e.g. Network and Cache).
+Note : It safe to build a singleton instance of this class.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">MovieRepository</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Encapsulates the Movie source's implementation (e.g. Network and Cache).
+Note : It safe to build a singleton instance of this class.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="get-movie.html">getMovie</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getMovie</span><span class="symbol">(</span><span class="identifier" id="com.rhexgomez.itunes.movie.app.source.repository.MovieRepository$getMovie(kotlin.String)/movieId">movieId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="../../com.rhexgomez.itunes.movie.app.source.cache/-movie-entity/index.html"><span class="identifier">MovieEntity</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="get-movies.html">getMovies</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getMovies</span><span class="symbol">(</span><span class="identifier" id="com.rhexgomez.itunes.movie.app.source.repository.MovieRepository$getMovies(kotlin.String, kotlin.Int)/keyword">keyword</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.rhexgomez.itunes.movie.app.source.repository.MovieRepository$getMovies(kotlin.String, kotlin.Int)/itemCount">itemCount</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;50<span class="symbol">)</span><span class="symbol">: </span><a href="../../com.rhexgomez.itunes.movie.app.source.boundary/-boundary-bundle/index.html"><span class="identifier">BoundaryBundle</span></a><span class="symbol">&lt;</span><a href="../../com.rhexgomez.itunes.movie.app.source.cache/-movie-entity/index.html"><span class="identifier">MovieEntity</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="get-watch-history.html">getWatchHistory</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getWatchHistory</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../../com.rhexgomez.itunes.movie.app.source.cache/-movie-entity/index.html"><span class="identifier">MovieEntity</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

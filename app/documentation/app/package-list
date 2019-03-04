@@ -1,0 +1,15 @@
+$dokka.format:html
+$dokka.linkExtension:html
+$dokka.location:com.rhexgomez.itunes.movie.app.util$toCurrency(kotlin.Double, kotlin.String)com.rhexgomez.itunes.movie.app.util/kotlin.-double/to-currency.html
+$dokka.location:com.rhexgomez.itunes.movie.app.util$toDate(kotlin.String)com.rhexgomez.itunes.movie.app.util/kotlin.-string/to-date.html
+$dokka.location:com.rhexgomez.itunes.movie.app.util$toStringDate(java.util.Date)com.rhexgomez.itunes.movie.app.util/java.util.-date/to-string-date.html
+com.rhexgomez.itunes.movie.app
+com.rhexgomez.itunes.movie.app.source.api
+com.rhexgomez.itunes.movie.app.source.boundary
+com.rhexgomez.itunes.movie.app.source.cache
+com.rhexgomez.itunes.movie.app.source.cache.dao
+com.rhexgomez.itunes.movie.app.source.repository
+com.rhexgomez.itunes.movie.app.ui
+com.rhexgomez.itunes.movie.app.ui.detail
+com.rhexgomez.itunes.movie.app.ui.home
+com.rhexgomez.itunes.movie.app.util

@@ -1,0 +1,60 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>com.rhexgomez.itunes.movie.app.source.boundary - app</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">app</a>&nbsp;/&nbsp;<a href="./index.html">com.rhexgomez.itunes.movie.app.source.boundary</a><br/>
+<br/>
+<h2>Package com.rhexgomez.itunes.movie.app.source.boundary</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-boundary-bundle/index.html">BoundaryBundle</a></p>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">BoundaryBundle</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span></code>
+<p>This packages the Boundary and the trigger for count.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-movie-boundary/index.html">MovieBoundary</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">MovieBoundary</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">BoundaryCallback</span><span class="symbol">&lt;</span><a href="../com.rhexgomez.itunes.movie.app.source.cache/-movie-entity/index.html"><span class="identifier">MovieEntity</span></a><span class="symbol">&gt;</span></code>
+<p>Notifies if we reached the last Movie in our List or no item is present in our database.
+This is a good place to trigger a network operation and cache the results.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-paging-request-helper/index.html">PagingRequestHelper</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">PagingRequestHelper</span></code>
+<p>A helper class for <a href="#">BoundaryCallback</a>s and
+<a href="#">DataSource</a>s to help with tracking network requests.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Type Aliases</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-request.html">Request</a></p>
+</td>
+<td>
+<code><span class="keyword">typealias </span><span class="identifier">Request</span>&nbsp;<span class="symbol">=</span>&nbsp;<span class="symbol">(</span><a href="-paging-request-helper/-callback/index.html"><span class="identifier">Callback</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Runner class that runs a request tracked by the <a href="-paging-request-helper/index.html">PagingRequestHelper</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

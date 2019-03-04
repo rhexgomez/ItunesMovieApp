@@ -1,0 +1,38 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>PagingRequestHelper.Callback - app</title>
+<link rel="stylesheet" href="../../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../../index.html">app</a>&nbsp;/&nbsp;<a href="../../index.html">com.rhexgomez.itunes.movie.app.source.boundary</a>&nbsp;/&nbsp;<a href="../index.html">PagingRequestHelper</a>&nbsp;/&nbsp;<a href="./index.html">Callback</a><br/>
+<br/>
+<h1>Callback</h1>
+<code><span class="keyword">class </span><span class="identifier">Callback</span></code>
+<p>Callback class provided to the <a href="#">.run</a> method to report the result.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="record-failure.html">recordFailure</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">recordFailure</span><span class="symbol">(</span><span class="identifier" id="com.rhexgomez.itunes.movie.app.source.boundary.PagingRequestHelper.Callback$recordFailure(kotlin.Throwable)/throwable">throwable</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><span class="identifier">Throwable</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Call this method with the failure message and the request can be retried via
+<a href="#">.retryAllFailed</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="record-success.html">recordSuccess</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">recordSuccess</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Call this method when the request succeeds and new data is fetched.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

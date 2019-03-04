@@ -1,0 +1,78 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>PagingRequestHelper.<init> - app</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">app</a>&nbsp;/&nbsp;<a href="../index.html">com.rhexgomez.itunes.movie.app.source.boundary</a>&nbsp;/&nbsp;<a href="index.html">PagingRequestHelper</a>&nbsp;/&nbsp;<a href="./-init-.html">&lt;init&gt;</a><br/>
+<br/>
+<h1>&lt;init&gt;</h1>
+<a name="com.rhexgomez.itunes.movie.app.source.boundary.PagingRequestHelper$&lt;init&gt;(java.util.concurrent.Executor)"></a>
+<code><span class="identifier">PagingRequestHelper</span><span class="symbol">(</span><span class="identifier" id="com.rhexgomez.itunes.movie.app.source.boundary.PagingRequestHelper$<init>(java.util.concurrent.Executor)/mRetryService">mRetryService</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/util/concurrent/Executor.html"><span class="identifier">Executor</span></a><span class="symbol">)</span></code>
+<p>A helper class for <a href="#">BoundaryCallback</a>s and
+<a href="#">DataSource</a>s to help with tracking network requests.</p>
+<p>It is designed to support 3 types of requests, <a href="-request-type/-i-n-i-t-i-a-l.html">INITIAL</a>,
+<a href="-request-type/-b-e-f-o-r-e.html">BEFORE</a> and <a href="-request-type/-a-f-t-e-r.html">AFTER</a> and runs only 1 request
+for each of them via <a href="#">.runIfNotRunning</a>.</p>
+<p>It tracks a <a href="-status/index.html">Status</a> and an <code>error</code> for each <a href="-request-type/index.html">RequestType</a>.</p>
+<p>A sample usage of this class to limit requests looks like this:</p>
+<p><strong>Override</strong><br/>
+public void onItemAtFrontLoaded(@NonNull MyItem itemAtFront) {
+helper.runIfNotRunning(PagingRequestHelper.RequestType.BEFORE,
+helperCallback -&gt; api.getTopBefore(itemAtFront.getName(), 10).enqueue(
+new Callback&amp;lt;ApiResponse&gt;() {</p>
+<p><strong>Override</strong><br/>
+public void onResponse(Call&amp;lt;ApiResponse&gt; call,
+Response&amp;lt;ApiResponse&gt; response) {
+// TODO insert new records into database
+helperCallback.recordSuccess();
+}</p>
+<p><strong>Override</strong><br/>
+public void onFailure(Call&amp;lt;ApiResponse&gt; call, Throwable t) {
+helperCallback.recordFailure(t);
+}
+}));
+}</p>
+<p><strong>Override</strong><br/>
+public void onItemAtEndLoaded(@NonNull MyItem itemAtEnd) {
+helper.runIfNotRunning(PagingRequestHelper.RequestType.AFTER,
+helperCallback -&gt; api.getTopBefore(itemAtEnd.getName(), 10).enqueue(
+new Callback&amp;lt;ApiResponse&gt;() {</p>
+<p><strong>Override</strong><br/>
+public void onResponse(Call&amp;lt;ApiResponse&gt; call,
+Response&amp;lt;ApiResponse&gt; response) {
+// TODO insert new records into database
+helperCallback.recordSuccess();
+}</p>
+<p><strong>Override</strong><br/>
+<p>public void onFailure(Call&amp;lt;ApiResponse&gt; call, Throwable t) {
+helperCallback.recordFailure(t);
+}
+}));
+}
+}</p>
+
+
+
+
+<p>The helper provides an API to observe combined request status, which can be reported back to the
+application based on your business rules.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+</BODY>
+</HTML>

@@ -1,0 +1,18 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Request - app</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">app</a>&nbsp;/&nbsp;<a href="index.html">com.rhexgomez.itunes.movie.app.source.boundary</a>&nbsp;/&nbsp;<a href="./-request.html">Request</a><br/>
+<br/>
+<h1>Request</h1>
+<code><span class="keyword">typealias </span><span class="identifier">Request</span>&nbsp;<span class="symbol">=</span>&nbsp;<span class="symbol">(</span><a href="-paging-request-helper/-callback/index.html"><span class="identifier">Callback</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Runner class that runs a request tracked by the <a href="-paging-request-helper/index.html">PagingRequestHelper</a>.</p>
+<p>When a request is invoked, it must call one of <a href="-paging-request-helper/-callback/record-failure.html">Callback.recordFailure</a>
+or <a href="-paging-request-helper/-callback/record-success.html">Callback.recordSuccess</a> once and only once. This call
+can be made any time. Until that method call is made, <a href="-paging-request-helper/index.html">PagingRequestHelper</a> will
+consider the request is running.</p>
+</BODY>
+</HTML>

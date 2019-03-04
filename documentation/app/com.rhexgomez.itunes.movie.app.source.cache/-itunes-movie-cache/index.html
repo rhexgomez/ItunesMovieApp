@@ -1,0 +1,72 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ItunesMovieCache - app</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">app</a>&nbsp;/&nbsp;<a href="../index.html">com.rhexgomez.itunes.movie.app.source.cache</a>&nbsp;/&nbsp;<a href="./index.html">ItunesMovieCache</a><br/>
+<br/>
+<h1>ItunesMovieCache</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">ItunesMovieCache</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">RoomDatabase</span></code>
+<p>This database is for caching Movie information. This will server
+as the single source truth.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">ItunesMovieCache</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>This database is for caching Movie information. This will server
+as the single source truth.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="movie-dao.html">movieDao</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">movieDao</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.rhexgomez.itunes.movie.app.source.cache.dao/-movie-dao/index.html"><span class="identifier">MovieDao</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="watch-history-dao.html">watchHistoryDao</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">watchHistoryDao</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.rhexgomez.itunes.movie.app.source.cache.dao/-watch-history-dao/index.html"><span class="identifier">WatchHistoryDao</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-d-a-t-a-b-a-s-e_-n-a-m-e.html">DATABASE_NAME</a></p>
+</td>
+<td>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">DATABASE_NAME</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="database.html">database</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">database</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">ItunesMovieCache</span></a></code>
+<p>The created database instance. This is a singleton therefore
+we do not need to recreate a new instance everytime we
+need it!</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

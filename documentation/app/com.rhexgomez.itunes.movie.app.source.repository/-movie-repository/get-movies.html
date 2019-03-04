@@ -1,0 +1,21 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>MovieRepository.getMovies - app</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">app</a>&nbsp;/&nbsp;<a href="../index.html">com.rhexgomez.itunes.movie.app.source.repository</a>&nbsp;/&nbsp;<a href="index.html">MovieRepository</a>&nbsp;/&nbsp;<a href="./get-movies.html">getMovies</a><br/>
+<br/>
+<h1>getMovies</h1>
+<a name="com.rhexgomez.itunes.movie.app.source.repository.MovieRepository$getMovies(kotlin.String, kotlin.Int)"></a>
+<code><span class="keyword">fun </span><span class="identifier">getMovies</span><span class="symbol">(</span><span class="identifier" id="com.rhexgomez.itunes.movie.app.source.repository.MovieRepository$getMovies(kotlin.String, kotlin.Int)/keyword">keyword</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.rhexgomez.itunes.movie.app.source.repository.MovieRepository$getMovies(kotlin.String, kotlin.Int)/itemCount">itemCount</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;50<span class="symbol">)</span><span class="symbol">: </span><a href="../../com.rhexgomez.itunes.movie.app.source.boundary/-boundary-bundle/index.html"><span class="identifier">BoundaryBundle</span></a><span class="symbol">&lt;</span><a href="../../com.rhexgomez.itunes.movie.app.source.cache/-movie-entity/index.html"><span class="identifier">MovieEntity</span></a><span class="symbol">&gt;</span></code>
+<h3>Parameters</h3>
+<p><a name="itemCount"></a>
+<code>itemCount</code> - the number of items to load in the <a href="#">androidx.recyclerview.widget.RecyclerView</a>
+    during first query. This implements a "limit" query internally in Room DB.</p>
+<p><strong>Return</strong><br/>
+The single source of truth for cached movies. This comes with an observable
+therefore you can use this to observe for any changes.</p>
+</BODY>
+</HTML>
