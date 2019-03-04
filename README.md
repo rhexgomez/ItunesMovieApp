@@ -15,3 +15,6 @@ with this approach it makes the app more maintainable and easier to test since w
 It also caches the results after consuming the API with that it makes the searching a lot efficient since we do not need
 to perform a similar request (save some bandwidth) plus the cached movies should be viewable offline except 
 the Video playback.
+
+See also the app the [DOCUMENTATION](https://rhexgomez.github.io/ItunesMovieApp/app/index.html) rendered by 
+[Dokka](https://github.com/Kotlin/dokka).
