@@ -5,7 +5,7 @@
 
 # ItunesMovieApp
 
-A sample app that consume the [Itune API Search API](https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/). 
+A sample app that consume the [Itune Search API](https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/). 
 This demo app only fetches MOVIES that matches the search keyword. 
 
 This app is using [Model–view–viewmodel](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) architecture because
