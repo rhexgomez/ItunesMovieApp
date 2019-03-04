@@ -1,6 +1,7 @@
 package com.rhexgomez.itunes.movie.app.ui.home
 
 import androidx.recyclerview.widget.RecyclerView
+import com.rhexgomez.itunes.movie.app.R
 import com.rhexgomez.itunes.movie.app.databinding.ItemSearchedMovieBinding
 import com.rhexgomez.itunes.movie.app.databinding.ItemWatchedMovieBinding
 import com.rhexgomez.itunes.movie.app.source.cache.MovieEntity
@@ -18,6 +19,7 @@ class SearchResultViewHolder(private val binder: ItemSearchedMovieBinding) : Rec
             genre.text = item.genre
             Picasso.get()
                 .load(item.image)
+                .placeholder(R.drawable.ic_film)
                 .centerCrop()
                 .fit()
                 .into(movieImage)
