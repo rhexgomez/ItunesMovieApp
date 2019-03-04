@@ -8,8 +8,14 @@ import com.rhexgomez.itunes.movie.app.source.cache.MovieEntity
 import com.rhexgomez.itunes.movie.app.util.toCurrency
 import com.squareup.picasso.Picasso
 
+/**
+ * Manages how the [ItemSearchedMovieBinding] will look like and its state!
+ */
 class SearchResultViewHolder(private val binder: ItemSearchedMovieBinding) : RecyclerView.ViewHolder(binder.root) {
 
+    /**
+     * Set the movie information to the View.
+     */
     fun init(item: MovieEntity) {
         binder.movie = item
         binder.apply {
@@ -26,6 +32,9 @@ class SearchResultViewHolder(private val binder: ItemSearchedMovieBinding) : Rec
         }
     }
 
+    /**
+     * Remove the movie information from the view.
+     */
     fun clear() {
         binder.movie = null
         binder.apply {
@@ -38,4 +47,7 @@ class SearchResultViewHolder(private val binder: ItemSearchedMovieBinding) : Rec
     }
 }
 
+/**
+ * Manages how the [ItemWatchedMovieBinding] will look like and its state!
+ */
 class WatchResultViewHolder(val binder: ItemWatchedMovieBinding) : RecyclerView.ViewHolder(binder.root)
