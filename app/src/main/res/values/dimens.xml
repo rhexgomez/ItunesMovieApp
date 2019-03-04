@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="common_padding">8dp</dimen>
+    <dimen name="common_margin">8dp</dimen>
+    <dimen name="title_text_size">20sp</dimen>
+    <dimen name="apple_icon_size">20dp</dimen>
+    <dimen name="apple_icon_right_margin">10dp</dimen>
+    <dimen name="search_text_size">15sp</dimen>
+    <dimen name="common_padding_huge">16dp</dimen>
+    <dimen name="common_margin_huge">16dp</dimen>
+    <dimen name="common_card_radius">5dp</dimen>
+    <dimen name="movie_history_recycler_height">200dp</dimen>
+    <dimen name="dummy_title_height">20dp</dimen>
+    <dimen name="dummy_right_margin">40dp</dimen>
+</resources>

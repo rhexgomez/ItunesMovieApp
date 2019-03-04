@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/default_background"
+            tools:context=".ui.MainActivity">
+
+        <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:paddingTop="@dimen/common_padding"
+                    android:paddingLeft="@dimen/common_padding"
+                    android:paddingRight="@dimen/common_padding"
+                    android:paddingStart="@dimen/common_padding"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <ImageView
+                        android:layout_marginRight="@dimen/apple_icon_right_margin"
+                        android:src="@drawable/ic_apple"
+                        android:layout_width="@dimen/apple_icon_size"
+                        android:layout_height="@dimen/apple_icon_size"
+                        app:layout_constraintEnd_toStartOf="@+id/movie_title"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginEnd="@dimen/apple_icon_right_margin"/>
+
+                <TextView
+                        android:layout_margin="@dimen/common_margin"
+                        android:id="@+id/movie_title"
+                        android:drawablePadding="16dp"
+                        android:textColor="@android:color/white"
+                        android:text="@string/itunes_movies"
+                        android:textSize="@dimen/title_text_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <RelativeLayout
+                    android:paddingTop="@dimen/common_padding"
+                    android:paddingLeft="@dimen/common_padding"
+                    android:paddingRight="@dimen/common_padding"
+                    android:paddingStart="@dimen/common_padding"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <EditText
+                        android:id="@+id/search_box"
+                        android:padding="8dp"
+                        android:layout_margin="@dimen/common_margin"
+                        android:background="@drawable/searchbox_background"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textSize="@dimen/search_text_size"
+                        android:textColorHint="@android:color/white"
+                        android:textColor="@android:color/white"
+                        android:hint="@string/search"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+
+            <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    <TextView
+                            android:id="@+id/recent_label"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/common_padding_huge"
+                            android:textSize="20sp"
+                            android:textColor="@android:color/white"
+                            android:text="Recent"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/watched_movies"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/movie_history_recycler_height"
+                            tools:layoutManager="LinearLayoutManager"
+                            tools:orientation="horizontal"
+                            tools:listitem="@layout/item_watched_movie"
+                            tools:itemCount="6"/>
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/common_padding_huge"
+                            android:textSize="20sp"
+                            android:textColor="@android:color/white"
+                            android:text="Results"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/searched_movies"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            tools:layoutManager="LinearLayoutManager"
+                            tools:listitem="@layout/item_searched_movie"
+                            tools:itemCount="6"/>
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

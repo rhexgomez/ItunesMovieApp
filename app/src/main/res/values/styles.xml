@@ -1,0 +1,11 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="TyperLib.Theme.Roboto.Thin">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/default_background</item>
+        <item name="colorPrimaryDark">@color/default_background</item>
+        <item name="colorAccent">@color/default_background</item>
+    </style>
+
+</resources>
